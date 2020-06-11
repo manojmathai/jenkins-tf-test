@@ -1,2 +1,2 @@
-# MyMavenApp
-Sample Project to demostrate Jenkins
+# Terraform
+Sample Project to demostrate Terraform Jenkins
