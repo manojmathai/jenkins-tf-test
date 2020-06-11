@@ -4,21 +4,22 @@ pipeline {
     SVC_ACCOUNT_KEY = credentials('terraform-auth')
   }
   stages {
-      stage('Checkout') {
+    stage('Checkout') {
       steps {
         checkout scm
         sh 'mkdir -p creds'
         sh 'echo $SVC_ACCOUNT_KEY | base64 -d > ./creds/serviceaccount.json'
-            }
       }
-	  stage('Terraform Init') {
+    }
+    stage('Terraform Init') {
       steps {
         sh "terraform init -input=false"
       }
-      stage('Terraform Apply') {
+    }
+    stage('Terraform Apply') {
       steps {
         sh "terraform apply"
       }
     }
- }
+  }
 }
