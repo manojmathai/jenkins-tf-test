@@ -15,6 +15,10 @@ pipeline {
       steps {
         sh "terraform init -input=false"
       }
+      stage('Terraform Apply') {
+      steps {
+        sh "terraform apply"
+      }
     }
  }
 }
