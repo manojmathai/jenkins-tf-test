@@ -10,6 +10,10 @@ resource "google_compute_instance" "inst-default" {
 
   labels = {
     application = "app1"
-   
+   }
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-9"
+    }
   }
 }
