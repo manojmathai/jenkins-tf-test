@@ -3,7 +3,7 @@ provider "google" {
  project     = "host-project-mm" 
 }
 
-resource "google_compute_instance" "default" {
+resource "google_compute_instance" "inst-default" {
   name        = "compute-instance-test"
   description = "Test compute instance."
   machine_type = "n1-standard-1"  
@@ -12,3 +12,4 @@ resource "google_compute_instance" "default" {
     application = "app1"
    
   }
+}
