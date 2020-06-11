@@ -16,4 +16,7 @@ resource "google_compute_instance" "inst-default" {
       image = "debian-cloud/debian-9"
     }
   }
+  network_interface {
+    network = "default"
+  }
 }
