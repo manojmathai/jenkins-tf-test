@@ -1,6 +1,6 @@
 provider "google" {
- credentials = "${file("adc.json")}"
- project     = "${var.project-name}" 
+ credentials = "./creds/serviceaccount.json"
+ project     = "host-project-mm" 
 }
 
 resource "google_compute_instance" "default" {
@@ -9,6 +9,6 @@ resource "google_compute_instance" "default" {
   machine_type = "n1-standard-1"  
 
   labels = {
-    application = "app1", 
+    application = "app1"
    
   }
